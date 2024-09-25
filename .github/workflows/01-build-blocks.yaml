@@ -6,4 +6,13 @@ jobs:
         steps:
             - name: Say hello
               run: echo "Hello World|"
+    ehco-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Failed step
+              run: |
+                    echo "I will fail"
+                    exit 1
+            - name: Say goodbye
+              run: echo "Goodbye!"
 
